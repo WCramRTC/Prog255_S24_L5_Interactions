@@ -43,10 +43,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
         }
 
-        // Camera
-        if(camera != null) {
-            camera.transform.position = playerLocation.position + new Vector3(cameraOffsetX, cameraOffsetY, cameraOffsetZ);
-        }
+        // // Camera
+        // if(camera != null) {
+        //     camera.transform.position = playerLocation.position + new Vector3(cameraOffsetX, cameraOffsetY, cameraOffsetZ);
+        // }
   
         
 
