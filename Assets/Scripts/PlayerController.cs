@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public GameObject camera;
 
+    [Header("Camera Controls")]
     public Transform playerLocation;
     public float cameraOffsetX;
     public float cameraOffsetY;
@@ -43,7 +44,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Camera
-        camera.transform.position = playerLocation.position + new Vector3(cameraOffsetX, cameraOffsetY, cameraOffsetZ);
+        if(camera != null) {
+            camera.transform.position = playerLocation.position + new Vector3(cameraOffsetX, cameraOffsetY, cameraOffsetZ);
+        }
+  
         
 
     }
